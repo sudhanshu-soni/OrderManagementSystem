@@ -1,0 +1,356 @@
+{
+    "info": {
+        "name": "Order Management App API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Customers",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/customers",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "customers"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Customer",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"Alice\",\n  \"email\": \"alice@example.com\",\n  \"address\": \"123 Main St\",\n  \"phone\": \"1234567890\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/customers",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "customers"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Grocery Items",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/grocery-items",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "grocery-items"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Grocery Item",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"Apple\",\n  \"category\": \"Fruit\",\n  \"price\": 1.5,\n  \"quantity\": 100\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/grocery-items",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "grocery-items"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Orders",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/orders",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "orders"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Order",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"customer\": {\"id\": 1},\n  \"groceryItems\": [{\"id\": 1}],\n  \"orderDate\": \"2026-03-22\",\n  \"totalPrice\": 15.0\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/orders",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "orders"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Customer By ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/customers/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "customers",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Customer",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"Alice Updated\",\n  \"email\": \"alice.updated@example.com\",\n  \"address\": \"456 Main St\",\n  \"phone\": \"9876543210\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/customers/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "customers",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Customer",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/customers/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "customers",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Grocery Item By ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/grocery-items/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "grocery-items",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Grocery Item",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"Apple Updated\",\n  \"category\": \"Fruit\",\n  \"price\": 2.0,\n  \"quantity\": 80\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/grocery-items/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "grocery-items",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Grocery Item",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/grocery-items/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "grocery-items",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Order By ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/orders/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "orders",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Order",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"customer\": {\"id\": 1},\n  \"groceryItems\": [{\"id\": 1}],\n  \"orderDate\": \"2026-03-23\",\n  \"totalPrice\": 20.0\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/orders/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "orders",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Order",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/orders/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "orders",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}
