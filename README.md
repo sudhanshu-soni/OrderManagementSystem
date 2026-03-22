@@ -4,6 +4,7 @@ A Spring Boot application for managing orders, built as a take-home assessment f
 
 ## Features
 - Create, update, and delete orders
+- Cascade delete: Deleting a customer will also delete all their orders
 - RESTful API endpoints
 - Layered architecture (Controller, Service, Repository)
 - Configurable via `application.properties`
@@ -54,6 +55,10 @@ The application will start on [http://localhost:8080](http://localhost:8080).
 
 ## Configuration
 Edit `src/main/resources/application.properties` to configure database and other settings.
+
+
+## Contributors
+- Sudhanshu Soni
 
 ## License
 This project is for assessment purposes only.
